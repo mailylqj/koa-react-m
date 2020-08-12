@@ -1,0 +1,284 @@
+<html>
+	<body style="margin: 20px auto 0; width: 1210px;">
+		<div>我是测试页面的说</div>	
+		<textarea style="width: 100%; resize: none;height: 400px;">{{result}}</textarea>	
+		<div class="j-module">
+		<script class="J_template" type="text/template">
+		<div class="user_s00000">
+
+			<style>
+			.J_ModuleWrap .user_s00000{ position:relative; z-index:5; background:url(//img13.360buyimg.com/zx/jfs/t1/22150/12/191/83743/5c07ab1bEdeb1f8e7/2be805357908913d.jpg) center center repeat; height:60px; }
+
+			
+			.user_title_1{ color：#888888}
+			
+			
+			.user_bgcolor_3{ background-color:#ffff}
+			
+			
+			.user_color_3{color:#ffffff;}
+			
+			
+			.user_color_5{color:#888888;}
+					
+			
+			.user_color_6{color:#666666;}
+			
+			/*-----  边框颜色 !固定的!  -----*/
+			.user_border_1{border:1px solid #dedede;transition:all 0.4s ease;}
+			
+			.user_border_bottom{ border-bottom:1px solid #dedede;}
+			
+			.user_border_15{border:1px solid #dedede;transition:all 0.4s ease;}
+			
+			.user_border_15:hover{border:1px solid #ffffff;transition:all 0.4s ease;}
+			
+			/*-----  边框颜色 !特殊的!  -----*/
+			.user_border_5{border:1px solid #dedede;transition:all 0.4s ease;}
+			
+			
+			.user_border_11{border:2px solid #888;transition:all 0.4s ease;}
+
+			/*-----   颜色样式一   -----*/
+			{{if data[0].quanjucolor == '1' }}
+
+			/*-----  模板主色背景  -----*/
+			.user_bgcolor_1{ background-color:#ec0c31}
+			
+			/*-----  模板辅色背景  -----*/
+			.user_bgcolor_2{ background-color:#565656}
+			
+			/*-----  主色字体  -----*/
+			.user_color_1{color:#ec0c31;}
+			
+			/*-----  辅色字体  -----*/
+			.user_color_2{color:#565656;}
+			
+			/*-----  价格颜色  -----*/
+			.user_color_4{color:#f10215;}
+			
+			/*-----  鼠标经过标题主色  -----*/
+			.user_title_1:hover{color:#ec0c31}
+			
+			/*-----  鼠标经过边框主色  -----*/
+			.user_border_1:hover{border:1px solid #ec0c31}
+			
+			/*-----  按钮主色  -----*/
+			.user_bgcolor_11{ background-color:#ec0c31}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#565656}
+			.user_bgcolor_11{ background-color:#ec0c31}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#565656}
+			
+			
+			/*-----  模块特殊  -----*/
+			.user_border_11:hover{border:none; background-color:#ec0c31; color:#fff;transition:all 0.4s ease;}
+			/*-----   颜色样式二   -----*/
+			{{else if data[0].quanjucolor == '2' }}
+			
+			/*-----  模板主色背景  -----*/
+			.user_bgcolor_1{ background-color:#1d86bf}
+			
+			/*-----  模板辅色背景  -----*/
+			.user_bgcolor_2{ background-color:#1b7db3}
+			
+			/*-----  主色字体  -----*/
+			.user_color_1{color:#1d86bf;}
+			
+			/*-----  辅色字体  -----*/
+			.user_color_2{color:#1b7db3;}
+			
+			/*-----  价格颜色  -----*/
+			.user_color_4{color:#f10215;}
+			
+			/*-----  鼠标经过标题主色  -----*/
+			.user_title_1:hover{color:#1d86bf}
+			
+			/*-----  鼠标经过边框主色  -----*/
+			.user_border_1:hover{border:1px solid #1d86bf}
+			
+			/*-----  按钮主色  -----*/
+			.user_bgcolor_11{ background-color:#1d86bf}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#1b7db3}
+			.user_bgcolor_11{ background-color:#1d86bf}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#1b7db3}
+			/*-----  模块特殊  -----*/
+			.user_border_11:hover{border:none; background-color:#1d86bf; color:#fff;transition:all 0.4s ease;}
+			/*-----  颜色样式三  -----*/
+			{{else if data[0].quanjucolor == '3' }}
+			/*-----  模板主色背景  -----*/
+			.user_bgcolor_1{ background-color:#474747}
+			
+			/*-----  模板辅色背景  -----*/
+			.user_bgcolor_2{ background-color:#ef0a04}
+			
+			/*-----  主色字体  -----*/
+			.user_color_1{color:#474747;}
+			
+			/*-----  辅色字体  -----*/
+			.user_color_2{color:#ef0a04;}
+			
+			/*-----  价格颜色  -----*/
+			.user_color_4{color:#f10215;}
+			
+			/*-----  鼠标经过标题主色  -----*/
+			.user_title_1:hover{color:#4747471}
+			
+			/*-----  鼠标经过边框主色  -----*/
+			.user_border_1:hover{border:1px solid #474747}
+			
+			/*-----  按钮主色  -----*/
+			.user_bgcolor_11{ background-color:#474747}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#ef0a04}
+			.user_bgcolor_11{ background-color:#474747}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#ef0a04}
+
+
+			/*-----  模块特殊  -----*/
+			.user_border_11:hover{border:none; background-color:#474747; color:#fff;transition:all 0.4s ease;}
+			/*-----   颜色样式四   -----*/
+			{{else if data[0].quanjucolor == '4' }}
+			/*-----  模板主色背景  -----*/
+			.user_bgcolor_1{ background-color:#12877f}
+			
+			/*-----  模板辅色背景  -----*/
+			.user_bgcolor_2{ background-color:#169d94}
+			
+			/*-----  主色字体  -----*/
+			.user_color_1{color:#12877f;}
+			
+			/*-----  辅色字体  -----*/
+			.user_color_2{color:#169d94;}
+			
+			/*-----  价格颜色  -----*/
+			.user_color_4{color:#f10215;}
+			
+			/*-----  鼠标经过标题主色  -----*/
+			.user_title_1:hover{color:#12877f}
+			
+			/*-----  鼠标经过边框主色  -----*/
+			.user_border_1:hover{border:1px solid #12877f}
+			
+			/*-----  按钮主色  -----*/
+			.user_bgcolor_11{ background-color:#12877f}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#169d94}
+			.user_bgcolor_11{ background-color:#12877f}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#169d94}
+			/*-----  模块特殊  -----*/
+			.user_border_11:hover{border:none; background-color:#12877f; color:#fff;transition:all 0.4s ease;}
+			/*-----颜色样式五-----*/
+			{{else if data[0].quanjucolor == '5' }}
+			/*-----  模板主色背景  -----*/
+			.user_bgcolor_1{ background-color:#d39c64}
+			
+			/*-----  模板辅色背景  -----*/
+			.user_bgcolor_2{ background-color:#e3aa6f}
+			
+			/*-----  主色字体  -----*/
+			.user_color_1{color:#d39c64;}
+			
+			/*-----  辅色字体  -----*/
+			.user_color_2{color:#e3aa6f;}
+			
+			/*-----  价格颜色  -----*/
+			.user_color_4{color:#f10215;}
+			
+			/*-----  鼠标经过标题主色  -----*/
+			.user_title_1:hover{color:#d39c64}
+			
+			/*-----  鼠标经过边框主色  -----*/
+			.user_border_1:hover{border:1px solid #d39c64}
+			
+			/*-----  按钮主色  -----*/
+			.user_bgcolor_11{ background-color:#d39c64}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#e3aa6f}
+			.user_bgcolor_11{ background-color:#d39c64}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#e3aa6f}
+
+			/*-----  模块特殊  -----*/
+			.user_border_11:hover{border:none; background-color:#d39c64; color:#fff;transition:all 0.4s ease;}
+			/*-----颜色样式六-----*/
+			{{else if data[0].quanjucolor == '6' }}
+			
+			/*-----  模板主色背景  -----*/
+			.user_bgcolor_1{ background-color:#249523}
+			
+			/*-----  模板辅色背景  -----*/
+			.user_bgcolor_2{ background-color:#62a95b}
+			
+			/*-----  主色字体  -----*/
+			.user_color_1{color:#249523;}
+			
+			/*-----  辅色字体  -----*/
+			.user_color_2{color:#62a95b;}
+			
+			/*-----  价格颜色  -----*/
+			.user_color_4{color:#f10215;}
+			
+			/*-----  鼠标经过标题主色  -----*/
+			.user_title_1:hover{color:#249523}
+			
+			/*-----  鼠标经过边框主色  -----*/
+			.user_border_1:hover{border:1px solid #249523}
+			
+			/*-----  按钮主色  -----*/
+			.user_bgcolor_11{ background-color:#249523}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#62a95b}
+			.user_bgcolor_11{ background-color:#249523}
+			
+			/*-----  鼠标经过按钮辅色  -----*/
+			.user_bgcolor_11:hover{ background-color:#62a95b}
+
+			/*-----  模块特殊  -----*/
+			.user_border_11:hover{border:none; background-color:#249523; color:#fff;transition:all 0.4s ease;}
+			
+			
+			/*-----颜色样式六-----*/
+			{{else if data[0].quanjucolor == '7' }}
+			
+			{{ if data[0].bgColor }}
+			.user_bgcolor_1{background-color:{{ data[0].bgColor }};}
+			.user_color_1{color:{{ data[0].bgColor }};}
+			.user_color_11{color:{{ data[0].bgColor }};}
+			.user_title_1:hover{color:{{ data[0].bgColor }};}
+			.user_border_11:hover{border:none; background-color:{{ data[0].bgColor }}; color:#fff;transition:all 0.4s ease;}
+			.user_bgcolor_11{ background-color:{{ data[0].bgColor }};}
+			{{ /if }}
+			
+			{{ if data[0].bgColortu }}
+			.user_bgcolor_2{background-color:{{ data[0].bgColortu }};}
+			.user_color_2{color:{{ data[0].bgColortu }} ;}
+			.user_color_11:hover{color:{{ data[0].bgColortu }};}
+			.user_bgcolor_11:hover{ background-color:{{ data[0].bgColortu }};}
+			{{ /if }}
+			{{ if data[0].bgColorsan }}
+			.user_color_4{color:{{ data[0].bgColorsan }};}
+			{{ /if }}
+			{{ /if }}
+			</style>
+		</div>
+		</script>
+		</div>
+	</body>
+</html>

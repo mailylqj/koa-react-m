@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page prototype="1" id="139950580">
+  <insertLayout>
+    <layout prototype="33" id="143422540">
+      <insertModule name="main">
+        <module prototype="-208" id="143424967" template="-320" origin="0" />
+        <module prototype="-368" id="143424523" template="-224" origin="0" />
+        <module prototype="58910" id="143423077" template="957366" origin="0" />
+        <module prototype="-384" id="143423041" template="-192" origin="0" />
+        <module prototype="-288" id="143422783" template="-256" origin="0" />
+        <module prototype="-192" id="143422668" template="-240" origin="0" />
+        <module prototype="-16" id="143422544" template="-304" origin="0" />
+      </insertModule>
+    </layout>
+    <layout prototype="33" id="140161450">
+      <insertModule name="main">
+        <module prototype="55555" id="140328449" template="905542" origin="0" />
+        <module prototype="-320" id="140162154" template="-288" origin="0" />
+        <module prototype="-352" id="140321830" template="-272" origin="0" />
+        <module prototype="-192" id="140321540" template="-240" origin="0" />
+        <module prototype="-176" id="140318636" template="-208" origin="0" />
+        <module prototype="-320" id="140316605" template="-288" />
+        <module prototype="-320" id="140316610" template="-288" />
+        <module prototype="-320" id="140316615" template="-288" />
+        <module prototype="-320" id="140316621" template="-288" />
+        <module prototype="-320" id="140316651" template="-288" />
+        <module prototype="-320" id="140316653" template="-288" />
+        <module prototype="-320" id="140316357" template="-288" />
+        <module prototype="-320" id="140316385" template="-288" />
+        <module prototype="-320" id="140316434" template="-288" />
+        <module prototype="-320" id="140316436" template="-288" />
+        <module prototype="-320" id="140316438" template="-288" />
+      </insertModule>
+    </layout>
+    <layout prototype="42" id="140328058">
+      <insertModule name="main" />
+    </layout>
+    <layout prototype="33" id="140161545">
+      <insertModule name="main" />
+    </layout>
+    <layout prototype="33" id="140161452">
+      <insertModule name="main" />
+    </layout>
+    <layout prototype="33" id="140110915">
+      <insertModule name="main">
+        <module prototype="-320" id="140149714" template="-288" origin="0" />
+      </insertModule>
+    </layout>
+  </insertLayout>
+</page>
+

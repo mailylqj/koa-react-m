@@ -1,0 +1,20 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<module prototype="-384" id="143423041" template="-192" origin="0">
+  <param name="CENTER_MODULE">{"countDownData":{"startTime":"2019-01-10 00:00:00","endTime":"2019-01-11 23:59:59"},"moduleMarginBottom":[],"template":{"type":1,"templateId":-192}}</param>
+</module>
+<module prototype="-288" id="143422783" template="-256" origin="0">
+  <param name="CENTER_MODULE">{"lunboGoodsGroup":{"materialCode":"m1bqYoekUj0","moduleCreate":1,"bi":0,"type":"2","showNum":4},"moduleMarginBottom":[],"template":{"type":1,"templateId":-256}}</param>
+</module>
+<module prototype="-192" id="143422668" template="-240" origin="0">
+  <param name="CENTER_MODULE">{"pictureHotspot":{"pictureList":[{"url":"//img14.360buyimg.com/cms/jfs/t1/14897/7/4701/23108/5c341701E203593de/1a655ae444fa9da6.jpg","name":"排行榜-1.jpg","naturalHeight":120,"naturalWidth":1125}],"maxWidth":1125,"hotspotList":[{"x":460,"y":72.5,"w":42.5,"h":33.75,"linkInfo":{"link":"//mall.jd.com/index-170905.html","linkType":4,"originalData":"//mall.jd.com/index-170905.html"},"target":"_blank","spotClass":"hot-spot-link","px":"460,72.5,42.5,33.75"},{"x":505,"y":51.25,"w":130,"h":65,"linkInfo":{"link":"//mall.jd.com/view_introduction-519829.html","linkType":6,"originalData":"//mall.jd.com/view_introduction-519829.html"},"target":"_blank","spotClass":"hot-spot-link","px":"505,51.25,130,65"}],"hotHeight":96},"moduleMarginBottom":[]}</param>
+</module>
+<module prototype="-16" id="143422544" template="-304" origin="0">
+  <param name="CENTER_MODULE">{"goodsMaterialGroup":{"materialCode":"Eb7iBG6rF8qhUY","moduleCreate":1,"bi":0,"type":"1","showNum":"10","replenishmentStatus":0},"numPerLine":0,"moduleMarginBottom":[],"template":{"type":1,"templateId":-304}}</param>
+</module>
+<module prototype="-176" id="140318636" template="-208" origin="0">
+  <param name="CENTER_MODULE">{"navigation":{"mode":1,"hotspotNavigation":{"loc":"1","navPictureHotspotInfo":{"pictureList":[{"url":"//img13.360buyimg.com/cms/jfs/t1/10263/33/5755/276041/5c19b164E424a1432/aa8c6a882ecf3c72.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":590,"naturalWidth":831},{"url":"//img13.360buyimg.com/cms/jfs/t1/10263/33/5755/276041/5c19b164E424a1432/aa8c6a882ecf3c72.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":590,"naturalWidth":831},{"url":"//img10.360buyimg.com/cms/jfs/t1/15035/13/2077/273371/5c19b073E2e4d5a11/abdb0f60f56a58ca.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":590,"naturalWidth":831}],"maxWidth":831}}},"moduleMarginBottom":[],"template":{"type":1,"templateId":-208},"version":3,"resId":1403186363,"pageId":170905}</param>
+</module>
+<module prototype="-320" id="140316605" template="-288">
+  <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+</module>

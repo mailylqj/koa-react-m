@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page prototype="1" id="139950580">
+  <param name="bg_pic" />
+  <param name="bg_color">#007</param>
+  <param name="userSet">diy</param>
+  <param name="backgroundPosition">right top</param>
+  <param name="backgroundRepeat">repeat-y</param>
+  <param name="bg_pic_config">repeat-y_right_top_px_px</param>
+  <param name="pic_attachment">0</param>
+  <insertLayout>
+    <layout prototype="33" id="143422540">
+      <insertModule name="main">
+        <module prototype="-208" id="143424967" template="-320" origin="0">
+          <param name="CENTER_MODULE">{"secKillGoodsGroup":{"materialCode":"CsZSYXhQfw","moduleCreate":1,"bi":0,"type":"1","showNum":20},"numPerLine":0,"moduleMarginBottom":[],"template":{"type":1,"templateId":-320}}</param>
+        </module>
+        <module prototype="-368" id="143424523" template="-224" origin="0">
+          <param name="CENTER_MODULE"><![CDATA[{"videoInfo":{"videoId":5353269,"videoUrl":"https://newbuz.360buyimg.com/video/4.5/jdvideo.html?autoplay=false&fuScrnEnabled=true&playbackRateEnabled=true&fileid=7447398154988036666&appid=1251412368&sw=1280&sh=724","coverUrl":"http://jdvodimg.jcloudcache.com/vodtransgzp1251412368/7447398154988036666/coverBySnapshot/1520497219_1669912311.100_0.jpg","customCoverUrl":"//img12.360buyimg.com/cms/jfs/t1/7516/14/12372/6949/5c35aeccE6b50af16/42930f94ccb2b25d.png","width":"1280","height":"724"},"moduleMarginBottom":[]}]]></param>
+        </module>
+        <module prototype="58910" id="143423077" template="957366" origin="0">
+          <param name="INTELLIGENT_REC">{"marginBottom":"0","version":1,"skuIds":"","displayModel":1,"size":8,"shopCategoryModel":0}</param>
+        </module>
+        <module prototype="-384" id="143423041" template="-192" origin="0">
+          <param name="CENTER_MODULE">{"countDownData":{"startTime":"2019-01-10 00:00:00","endTime":"2019-01-11 23:59:59"},"moduleMarginBottom":[],"template":{"type":1,"templateId":-192}}</param>
+        </module>
+        <module prototype="-288" id="143422783" template="-256" origin="0">
+          <param name="CENTER_MODULE">{"lunboGoodsGroup":{"materialCode":"m1bqYoekUj0","moduleCreate":1,"bi":0,"type":"2","showNum":4},"moduleMarginBottom":[],"template":{"type":1,"templateId":-256}}</param>
+        </module>
+        <module prototype="-192" id="143422668" template="-240" origin="0">
+          <param name="CENTER_MODULE">{"pictureHotspot":{"pictureList":[{"url":"//img14.360buyimg.com/cms/jfs/t1/14897/7/4701/23108/5c341701E203593de/1a655ae444fa9da6.jpg","name":"排行榜-1.jpg","naturalHeight":120,"naturalWidth":1125}],"maxWidth":1125,"hotspotList":[{"x":460,"y":72.5,"w":42.5,"h":33.75,"linkInfo":{"link":"//mall.jd.com/index-170905.html","linkType":4,"originalData":"//mall.jd.com/index-170905.html"},"target":"_blank","spotClass":"hot-spot-link","px":"460,72.5,42.5,33.75"},{"x":505,"y":51.25,"w":130,"h":65,"linkInfo":{"link":"//mall.jd.com/view_introduction-519829.html","linkType":6,"originalData":"//mall.jd.com/view_introduction-519829.html"},"target":"_blank","spotClass":"hot-spot-link","px":"505,51.25,130,65"}],"hotHeight":96},"moduleMarginBottom":[]}</param>
+        </module>
+        <module prototype="-16" id="143422544" template="-304" origin="0">
+          <param name="CENTER_MODULE">{"goodsMaterialGroup":{"materialCode":"Eb7iBG6rF8qhUY","moduleCreate":1,"bi":0,"type":"1","showNum":"10","replenishmentStatus":0},"numPerLine":0,"moduleMarginBottom":[],"template":{"type":1,"templateId":-304}}</param>
+        </module>
+      </insertModule>
+    </layout>
+    <layout prototype="33" id="140161450">
+      <param name="layout_style">{"bgColor":"","outSideColor":"","bgPic":"//img11.360buyimg.com/cms/jfs/t1/6830/6/8806/22924/5c10a36bE3080d75c/f4eb5a581bf28dd2.jpg","picRepeat":"repeat","picLenV":"44","picLenVUnit":"px","picLenH":"23","bgalign":"","picLenHUnit":"px"}</param>
+      <param name="layout_area_style">{"bgColor":"","picAttachment":0}</param>
+      <insertModule name="main">
+        <module prototype="55555" id="140328449" template="905542" origin="0">
+          <param name="deco_module_space">0</param>
+          <param name="MOD_ALL_PRODUCTS">{"marginBottom":"0","displayType":0,"sortType":1,"open":true,"defaultSearchWord":"777"}</param>
+        </module>
+        <module prototype="-320" id="140162154" template="-288" origin="0">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-352" id="140321830" template="-272" origin="0" />
+        <module prototype="-192" id="140321540" template="-240" origin="0">
+          <param name="CENTER_MODULE">{"pictureHotspot":{"pictureList":[{"url":"//img14.360buyimg.com/cms/jfs/t1/29910/2/2134/40205/5c19e8fcEc2fb8b3b/8398de6bf09e3f30.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":300,"naturalWidth":210},{"url":"//img14.360buyimg.com/cms/jfs/t1/21306/20/2120/49226/5c19e885Ecb230ecd/98d55dc743f76663.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":300,"naturalWidth":210},{"url":"//img11.360buyimg.com/cms/jfs/t1/21306/20/2120/49226/5c19e885Ecb230ecd/98d55dc743f76663.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":300,"naturalWidth":210}],"maxWidth":210},"moduleMarginBottom":[]}</param>
+        </module>
+        <module prototype="-176" id="140318636" template="-208" origin="0">
+          <param name="CENTER_MODULE">{"navigation":{"mode":1,"hotspotNavigation":{"loc":"1","navPictureHotspotInfo":{"pictureList":[{"url":"//img13.360buyimg.com/cms/jfs/t1/10263/33/5755/276041/5c19b164E424a1432/aa8c6a882ecf3c72.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":590,"naturalWidth":831},{"url":"//img13.360buyimg.com/cms/jfs/t1/10263/33/5755/276041/5c19b164E424a1432/aa8c6a882ecf3c72.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":590,"naturalWidth":831},{"url":"//img10.360buyimg.com/cms/jfs/t1/15035/13/2077/273371/5c19b073E2e4d5a11/abdb0f60f56a58ca.jpg","name":"店铺装修-f1编辑页_店铺模板-1.jpg","naturalHeight":590,"naturalWidth":831}],"maxWidth":831}}},"moduleMarginBottom":[],"template":{"type":1,"templateId":-208},"version":3,"resId":1403186363,"pageId":170905}</param>
+        </module>
+        <module prototype="-320" id="140316605" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316610" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316615" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316621" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316651" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316653" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316357" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316385" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316434" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316436" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+        <module prototype="-320" id="140316438" template="-288">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":20,"content":"<p>\n\t333\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t332\n</p>\n<p>\n\t4\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t333\n</p>"}}]]></param>
+        </module>
+      </insertModule>
+    </layout>
+    <layout prototype="42" id="140328058">
+      <insertModule name="main" />
+    </layout>
+    <layout prototype="33" id="140161545">
+      <param name="layout_style">{"bgColor":"","outSideColor":"","bgPic":"//img12.360buyimg.com/cms/jfs/t1/22685/2/1498/6456/5c130e0bE58b47288/b11a6c5fdda0d033.jpg","picRepeat":"no-repeat","picLenV":"","picLenVUnit":"px","picLenH":"","bgalign":"center center","picLenHUnit":"px"}</param>
+      <param name="layout_area_style">{"bgColor":"","picAttachment":0}</param>
+      <insertModule name="main" />
+    </layout>
+    <layout prototype="33" id="140161452">
+      <insertModule name="main" />
+    </layout>
+    <layout prototype="33" id="140110915">
+      <param name="layout_style">{"bgColor":"#4B28EB","outSideColor":"#14A81E","bgPic":"//img14.360buyimg.com/cms/jfs/t1/9439/2/9378/14789/5c135ff4Ea7665de0/87b0f1f252862d02.jpg","picRepeat":"no-repeat","picLenV":"","picLenVUnit":"px","picLenH":"","bgalign":"center center","picLenHUnit":"px"}</param>
+      <param name="layout_area_style">{"bgColor":"#14A81E","picAttachment":0}</param>
+      <insertModule name="main">
+        <module prototype="-320" id="140149714" template="-288" origin="0">
+          <param name="CENTER_MODULE"><![CDATA[{"htmlContent":{"width":14,"content":"<p>\n\t44\n</p>\n<p>\n\t44\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t55\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t55\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t<br />\n</p>\n<p>\n\t<br />\n</p>"}}]]></param>
+        </module>
+      </insertModule>
+    </layout>
+  </insertLayout>
+</page>
+

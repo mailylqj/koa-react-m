@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>koa中如何优雅地处理异常和错误</title>
+    <meta name="description" content="koa中如何优雅地处理异常和错误" />
+    <meta name="author" content="cdliqiaojun" />
+
+    <link rel="stylesheet" href="/examples/brochure/impress-demo.css"/>
+
+    <link rel="stylesheet" href="/examples/brochure/font-awesome.css"/>
+    <link rel="stylesheet" href="/examples/brochure/animate.css"/>
+    <link rel="stylesheet" href="/libs/highlight/monokai-sublime.css"/>
+</head>
+<body class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+        <div id="slogan" class="step" data-x="0" data-y="0" data-z="-5000" data-rotate="180" data-scale="1">
+            <p class="font logo"><span class="salmon">{</span>KOA如何<span class="salmon">优雅</span>地处理异常和错误<span class="salmon">}</span></p>
+            <div class="drop_box">
+                <span id="drop_down" class="font font-x0 slogan_finish img-routed"><span class="dark">by</span>李乔军</span>
+            </div>
+            <div class="hint">
+                <p class="mouse">京东商城 平台业务研发部 应用业务产品研发部 成都研发部</p>
+            </div>
+        </div>
+
+        <div id="throw" class="step" data-x="0" data-y="0" data-rotate="0" data-scale="100">
+            <p class="font font-x2"><span class="salmon">{</span>#<span class="salmon">}</span><span class="font title">异常和错误的抛出</span></p>
+        </div>
+        <div id="throw_content1" class="step" data-x="-45000" data-y="-500" data-z="0" data-scale="5" data-rotate="10">
+            <p class="font font-x2 text-center">常见抛出<span class="salmon">异常</span>和<span class="salmon">错误</span>类型：</p>
+            <ul class="list-view">
+                <li>代码语法不规范造成的JS报错异常</li>
+                <li>程序运行中发生的一些未知异常</li>
+                <li>HTTP错误</li>
+                <li>自定义的业务逻辑错误</li>
+            </ul>
+        </div>
+        <div id="throw_content2" class="step" data-x="-25000" data-y="-500" data-z="0" data-scale="15" data-rotate="-10">
+            <p class="font font-x2 text-center"><span class="salmon">不优雅</span>的方式</p>
+            <p class="list-view">koa框架提供了<span class="salmon">ctx.throw(400)</span>的方式，可以让我们方便地抛出http错误，但是如果你想同时返回一些有用信息怎么办？也许你会这么做：</p>
+            <pre>
+                <code class="javascript">
+    ctx.status = 400
+    ctx.body = {
+        msg: "参数错误"
+    }
+                </code>
+            </pre>
+        </div>
+        <div id="throw_content3" class="step" data-x="-500" data-y="-500" data-z="0" data-scale="5" data-rotate="10">
+            <p class="list-view">若需要定义若干业务逻辑错误码和说明，返回<span class="salmon">不同的code</span>，在controller层面，你也许可以这样处理：</p>
+            <pre>
+                <code class="javascript">
+    router.get('/', (ctx, next) => {
+        if (tokenExpire(token)) {
+            const errcode = ERROR_CODE.TOKEN_EXPIRED
+            ctx.body = {
+                errcode,
+                msg: ERROR_MSG[errcode]
+            }
+            return
+        }
+        // do something
+    })
+                </code>
+            </pre>
+        </div>
+        <div id="throw_content4" class="step" data-x="25000" data-y="-500" data-z="30000" data-scale="15" data-rotate="-10">
+            <p class="list-view">如果是在<span class="salmon">model层</span>或者<span class="salmon">server层</span>，要处理这样的错误怎么办？</p>
+            <ul class="list-view">
+                <li>通过<span class="salmon">定义返回值</span>来说明错误，在controller中判断返回值再返回相应错误码，比如：</li>
+            </ul>
+            <pre>
+                <code class="javascript">
+    router.get('/', (ctx, next) => {
+        if (tokenExpire(token)) {
+            const errcode = ERROR_CODE.TOKEN_EXPIRED
+            ctx.body = {
+                errcode,
+                msg: ERROR_MSG[errcode]
+            }
+            return
+        }
+        // do something
+    })
+                </code>
+            </pre>
+        </div>
+        <div id="throw_content5" class="step" data-x="40000" data-y="-500" data-z="0" data-scale="5" data-rotate="10">
+            <ul class="list-view">
+                <li>抛出Error，在controller中<span class="salmon">catch</span>住异常，并对比err.message来返回相应错误码，比如：</li>
+            </ul>
+            <pre>
+                <code class="javascript">
+    const somefunc = async (token) => {
+        const res = await tokenExpire(token)
+        if (res) {
+            throw Error(ERROR_MSG.TOKEN_EXPIRED)
+        }
+        // do something
+    }
+                </code>
+            </pre>
+        </div>
+        <div id="what" class="step" data-x="-10000" data-y="30000" data-z="0" data-rotate="0" data-scale="200">
+            <p class="font font-x2"><span class="salmon">{</span>#<span class="salmon">}</span><span class="font title">异常的捕获</span></p>
+        </div>
+
+        <div id="what_content1" class="step" data-x="26000" data-y="31000" data-z="0" data-rotate="0" data-scale="20">
+            <p class="font font-x2 text-center"><span class="salmon">error</span>事件的监听方式：</p>
+            <pre>
+                <code class="javascript">
+    const Koa = require('koa')
+    const app = new Koa()
+
+    app.on('error', (err, next) => { 
+        console.error('server error',err)
+    })
+    const main = ctx => { 
+        ctx.throw(500)
+    }
+
+    app.use(main)
+    app.listen(3000)
+                </code>
+            </pre>
+        </div>
+
+        <div id="what_content2" class="step" data-x="45000" data-y="41000" data-z="30000" data-rotate="10" data-scale="10">
+            <p class="font font-x2 text-center">重载<span class="salmon">app.context.onerror</span>方法的方式：</p>
+            <pre>
+                <code class="javascript">
+    const Koa = require('koa')
+    const app = new Koa()
+
+    app.context.onerror = function(err){
+        console.error('server error1',err)
+    }
+    const main = ctx => { 
+        ctx.throw(500)
+    }
+
+    app.use(main)
+    app.listen(3000)
+                </code>
+            </pre>
+        </div>
+
+        <div id="what_content3" class="step" data-x="55000" data-y="41000" data-z="80000" data-rotate="-10" data-scale="20">
+            <p class="font font-x2 text-center"><span class="salmon">中间件</span>的处理方式：</p>
+            <pre>
+                <code class="javascript">
+    const Koa = require('koa')
+    const app = new Koa()
+
+    app.use( async (ctx, next) =>{
+        await next().catch(error => {
+            console.log(error)
+        });
+    })
+    const main = ctx => { 
+        ctx.throw(500)
+    }
+
+    app.use(main)
+    app.listen(3000)
+                </code>
+            </pre>
+        </div>
+
+        <div id="tech" class="step" data-x="-10000" data-y="80000" data-z="0" data-rotate="0" data-scale="300">
+            <p class="font font-x2"><span class="salmon">{</span>#<span class="salmon">}</span><span class="font title">更加优雅的方式</span></p>
+        </div>
+        <div id="tech_content" class="step ruby" data-x="-58000" data-y="79500" data-z="0" data-rotate="0" data-scale="20">
+            <p class="list-view">目标：我们希望无论在哪里，直接<span class="salmon">一行代码</span>就可以抛出错误，并被<span class="salmon">正确处理</span>，返回相应的错误码和信息。</p>
+            <p class="list-view">方案：自定义的<span class="salmon">继承于Error构造器</span>的方法，利用koa中间件catch住错误，并统一把返回值做处理。</p>
+        </div>
+        <div id="frontend" class="step animar" data-x="19000" data-y="83000" data-z="0" data-rotate="30" data-scale="15">
+            <ul class="list-view">
+                <li>定义继承于Error构造器的方法CustomError</li>
+            </ul>
+            <pre>
+                <code class="javascript">
+    function CustomError(code, msg) {
+        Error.call(this, '');
+        if (arguments.length === 1 && typeof arguments[0] == 'string') {
+            msg = arguments[0];
+            code = 300;
+        }
+        this.code = code;
+        this.msg = msg || ERROR_MSG[code] || '发生了一个致命错误！';
+        this.getCodeMsg = function () {
+            return { code: this.code, msg: this.msg }
+        }
+    }
+    util.inherits(CustomError, Error);// 对象原型继承
+                </code>
+            </pre>
+        </div>
+        <div id="backend" class="step animar" data-x="68000" data-y="80000" data-z="0" data-rotate="-30" data-scale="10">
+            <ul class="list-view">
+                <li>抛出错误</li>
+            </ul>
+            <pre>
+                <code class="javascript">
+    const somefunc = async (token) => {
+        const res = await tokenExpire(token)
+        if (res) {
+            throw new CustomError(CUSTOM_CODE.SOME_CUSTOM_ERROR)
+        }
+        // do something
+    }
+                </code>
+            </pre>
+        </div>
+
+        <div id="catch" class="step animar" data-x="108000" data-y="80000" data-z="0" data-rotate="-30" data-scale="10">
+            <ul class="list-view">
+                <li>koa中间件统一catch住Error，并返回相应code,msg</li>
+            </ul>
+            <pre>
+                <code class="javascript">
+    app.use((ctx, next) => {
+        return next().catch((err) => {
+            let code = 500
+            let msg = 'unknown error'
+            if (err instanceof CustomError || err instanceof HttpError) {
+                const res = err.getCodeMsg()
+                ctx.status = err instanceof HttpError ? res.code : 200
+                code = res.code
+                msg = res.msg
+            } else {
+                console.error('err', err)
+            }
+            ctx.body = { code, msg }
+        })
+    })
+                </code>
+            </pre>
+        </div>
+
+        <div id="services" class="step" data-x="-10000" data-y="140000" data-z="0" data-rotate="0" data-scale="400">
+            <p class="font font-x2"><span class="salmon">{</span>#<span class="salmon">}</span><span class="font title">koa-onerror的介绍</span></p>
+        </div>
+        <div id="services_one" class="step" data-x="-160000" data-y="141000" data-z="0" data-rotate="-90" data-scale="40">
+            <p class="list-view">koa-onerror的使用</p>
+            <pre>
+                <code class="javascript">
+    npm install koa-onerror
+                </code>
+            </pre>
+            <pre>
+                <code class="javascript">
+    const fs = require('fs');
+    const koa = require('koa');
+    const onerror = require('koa-onerror');
+    const app = new koa();
+    onerror(app);
+    app.use(ctx => {
+        // foo();
+        ctx.body = fs.createReadStream('not exist');
+    });
+                </code>
+            </pre>
+        </div>
+        <div id="services_tags" class="step" data-x="-160000" data-y="141000" data-z="2000" data-rotate-x="-90" data-rotate-y="90" data-rotate-z="0" data-scale="12">
+            <p class="text-center upLine" style="font-size:30px;"><span class="salmon"><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i></span></p>
+            <ul class="list-view scaleZero" style="margin-left:260px;font-size: 30px;margin-top:0; ">
+                <li>all: 设置后其他选项失效</li>
+                <li>text: 返回类型为text的处理函数</li>
+                <li>json: 返回类型为json的处理函数</li>
+                <li>html: 返回类型为html的处理函数</li>
+                <li>redirect: 如果返回类型是html，则可以添加在跳转</li>
+            </ul>
+            <p class="text-center downLine" style="font-size:30px;"><span class="salmon"><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i><i class="icon-minus"></i></span></p>
+        </div>
+
+        <div id="Options" class="step animar" data-x="-10000" data-y="141000" data-z="2000" data-rotate-x="-90" data-rotate-y="90" data-rotate-z="0" data-scale="12">
+            <p class="list-view">Options的使用示例</p>
+            <pre>
+                <code class="javascript">
+    const fs = require('fs');
+    const koa = require('koa');
+    const onerror = require('koa-onerror');
+    const app = new koa();
+    onerror(app, {
+        json(ctx, error) {
+            ctx.body = {code: error.status, msg: error.message}
+        }
+    });
+    app.use(ctx => {
+        // foo();
+        ctx.body = fs.createReadStream('not exist');
+    });
+                </code>
+            </pre>
+        </div>
+        
+        <div id="slogan-finish" class="step finish" data-x="82000" data-y="145000" data-z="" data-rotate="1000" data-scale="1">
+            <p class="font logo"><span class="salmon">{</span><span class="salmon">感谢</span>大家参加<span class="salmon">}</span></p>
+            <div class="drop_box">
+                <span class="font font-x0 slogan_finish img-routed">李乔军</span>
+                <span id="drop_down" class="font font-x0 slogan_finish img-routed">李乔军</span>
+            </div>
+        </div>
+        <div id="success_map" class="step" data-x="18000" data-y="180000" data-z="0" data-rotate-x="0" data-rotate-y="170" data-rotate-z="-90" data-scale="30">
+            <div class="map_bg text-center">
+                <img src="images/1550819990885.jpg" width="500"/>
+                <p class="list-view">请手机（京东ME）扫描上方二维码签到</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/libs/jquery/jquery-1.10.2.min.js"></script>
+    <script src="/libs/highlight/highlight.min.js"></script>
+    <script src="/libs/impress/impress.js"></script>
+    <script src="/examples/brochure/script.js"></script>
+</body>
+</html>

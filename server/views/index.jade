@@ -1,0 +1,15 @@
+doctype html
+html
+	head
+		title #{title}
+		meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+	body
+		header
+			include partials/header.jade
+		main
+			#container
+		footer
+			include partials/footer.jade
+		script(type='text/javascript', src='/dist/common/common.js')
+		script(type='text/javascript', src='/dist/common/vendor.js')
+		script(type='text/javascript', src='/dist/pages/index.js')
